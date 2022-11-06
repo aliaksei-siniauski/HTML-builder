@@ -19,5 +19,4 @@ rl.on("line", (text) => {
 });
 
 rl.on("error", (err) => console.log(err));
-process.on("SIGINT", () => console.log("See you next time!"));
 process.on("exit", () => console.log("See you next time!"));
