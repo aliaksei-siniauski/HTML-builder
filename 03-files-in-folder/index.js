@@ -12,7 +12,7 @@ fs.readdir(pathToFolder, { withFileTypes: true }, function (err, items) {
         path.resolve(__dirname, "secret-folder", item.name),
         (err, status) => {
           [item, extension] = item.name.split(".");
-          console.log(`${item} - ${extension} - ${status.size}`);
+          console.log(`${item} - ${extension} - ${status.size}kb\n`);
         }
       );
     }

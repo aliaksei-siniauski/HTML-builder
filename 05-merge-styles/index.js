@@ -18,7 +18,6 @@ fs.readdir(__dirname, (err, items) => {
     items.map((item) => {
       if (item.includes(".css")) {
         const pathToCSSFile = path.resolve(pathToSource, item);
-
         fs.readFile(pathToCSSFile, "utf8", (err, data) => {
           fs.appendFile(path.resolve(pathToDist, "bundle.css"), data, () => {});
         });
